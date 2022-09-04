@@ -21,6 +21,7 @@ body{
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo:hover,
 .logo:focus{
@@ -77,6 +78,7 @@ ul {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link:hover,
 .menu-link:focus{
@@ -100,6 +102,7 @@ ul {
     font-weight: 500;
     line-height: 1.14; 
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .email-phone .contacts:hover,
 .email-phone .contacts:focus {
@@ -113,6 +116,7 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts:hover .contacts-icon,
 .contacts:focus .contacts-icon{
@@ -161,6 +165,7 @@ ul {
     border-color: transparent;
     background-color: var(--accent-color);
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button:hover {
     background-color: var(--accent-color);
@@ -209,7 +214,8 @@ justify-content: space-between;
     border-radius: 4px;
 }
 
-/* SKILLS */
+/* SKILLS 
+Як розмістити текст посередині, не застосовуючи верхнього падингу? Чому флекс не ставить його по центру оверлею?*/
 .skills{
     margin-bottom: 50px;
     font-weight: 700;
@@ -223,6 +229,27 @@ justify-content: space-between;
     display: flex;
     justify-content: space-between;
     column-gap: 30px;
+}
+.skills-list{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills-label{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    padding-top: 27px;
+    bottom: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--second-text-color);
+    background-color:rgba(47, 48, 58, 0.8);
 }
 
 /* TEAM */
@@ -281,6 +308,7 @@ justify-content: space-between;
 }
 .social-item{
     fill: var(--icon-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link{
     display:flex;
@@ -290,6 +318,7 @@ justify-content: space-between;
     height: 44px;
     border-radius: 50%;
     background-color:var(--bcg-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus{
@@ -324,10 +353,12 @@ justify-content: space-between;
     width: 170px;
     height:92px;
     border:1px solid var(--icon-color);
-    border-radius: 4px;  
+    border-radius: 4px; 
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-item{
     fill: var(--icon-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logos-bg:hover,
 .logos-bg:focus{
@@ -366,6 +397,7 @@ footer .contacts-list:not(:last-child) {
 }
 footer .post-address{
     color: var(--second-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 footer .post-address:hover,
 footer .post-address:focus {
@@ -373,6 +405,7 @@ footer .post-address:focus {
 }
 footer .contacts-footer {
         color: rgba(255, 255, 255, 0.6);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 footer .contacts-footer:hover,
 footer .contacts-footer:focus {
@@ -411,9 +444,11 @@ footer .contacts-footer:focus {
     height: 44px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-item{
     fill: var(--second-text-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:hover,
 .footer-social-link:focus{
@@ -447,6 +482,9 @@ footer .contacts-footer:focus {
     letter-spacing: 0.03em;
     color: var(--title-text-color);
     cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-button:hover,
 .filter-button:focus{
@@ -487,6 +525,7 @@ footer .contacts-footer:focus {
 
 .works-link{
     display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .works-link:hover,
 .works-link:focus{
